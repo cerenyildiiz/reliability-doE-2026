@@ -29,7 +29,7 @@ for (s in shapes) {
     status <- ifelse(time_true <= censor_time, 1, 0)
     
     data <- data.frame(time = time_obs, status = status)
-    
+    # Null (boş) model kurulmuştur.
     weibull_model <- survreg(Surv(time, status) ~ 1,
                              data = data,
                              dist = "weibull")
