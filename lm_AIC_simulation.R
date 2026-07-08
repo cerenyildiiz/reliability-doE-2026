@@ -8,10 +8,10 @@ library(MASS)
 
 data <- data.frame(matrix(runif(20000), ncol = 100))
 
-dat$y <- rnorm(200)
+data$y <- rnorm(200)
 
 
-full_model <- lm(y ~ ., data = dat)
+full_model <- lm(y ~ ., data = data)
 
 
 summary(full_model)
