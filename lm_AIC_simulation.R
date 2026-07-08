@@ -1,3 +1,4 @@
+# Referans Örnek
 # AIC ile model seçimi sonrası klasik p-değerlerinin yanıltıcı olabileceğini
 # gösteren basit bir simülasyon 
 # install.packages("MASS")
