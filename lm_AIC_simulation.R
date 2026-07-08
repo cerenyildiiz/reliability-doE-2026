@@ -24,7 +24,7 @@ selected_model <- stepAIC(full_model)
 
 summary(selected_model)
 
---------------------------------------------
+ # --------------------------------------------
 set.seed(123)
 
 library(MASS)
