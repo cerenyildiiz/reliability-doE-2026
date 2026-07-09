@@ -34,3 +34,11 @@ aictab(
   modnames = names(cand.models),
   second.ord = TRUE
 )
+
+
+
+
+
+
+
+# References: 1. https://www.rdocumentation.org/packages/AICcmodavg/versions/1.0/topics/aictab
