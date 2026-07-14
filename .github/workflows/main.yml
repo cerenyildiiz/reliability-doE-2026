@@ -1,0 +1,31 @@
+name: Run R Simulation
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  simulation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Install packages
+        run: |
+          Rscript -e 'install.packages(c(
+            "survival",
+            "AICcmodavg",
+            "ggplot2",
+            "dplyr",
+            "tidyr"
+          ), repos="https://cloud.r-project.org")'
+
+      - name: Run simulation
+        run: Rscript AICc-simulation.R
