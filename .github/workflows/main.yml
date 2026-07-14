@@ -22,8 +22,15 @@ jobs:
         run: |
           Rscript -e 'install.packages(
             c("tidyverse", "survival", "AICcmodavg"),
-            repos = "https://cloud.r-project.org"
+            repos = "https://cloud.r-project.org",
+            dependencies = TRUE
           )'
+
+      - name: Check installed packages
+        run: |
+          Rscript -e 'library(tidyverse)'
+          Rscript -e 'library(survival)'
+          Rscript -e 'library(AICcmodavg)'
 
       - name: Run simulation
         run: Rscript AICc-simulation.R
